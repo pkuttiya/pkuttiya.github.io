@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+
+myflix
+
+</title>
+<link href='/assets/favicons/apple-touch-icon.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/assets/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/assets/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/assets/favicons/manifest.json' rel='manifest'>
+<meta content='#000000' name='theme-color'>
+<link href='/assets/css/main.css' rel='stylesheet'>
+<script src='/assets/js/jquery.min.js'></script>
+<script src='/assets/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+<header>
+<nav>
+<div class='nav' id='page'>
+<div id='logo'>
+<h3>
+<a href='/'>Paul Kuttiya</a>
+</h3>
+</div>
+<div class='nav-right text-center'>
+<ul>
+<li>
+<a href='/resume'>
+<i class='fa fa-file'></i>
+<span>
+resume
+</span>
+</a>
+</li>
+<li>
+<a href='/contact'>
+<i class='fa fa-envelope'></i>
+<span>
+contact
+</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/pookzzz2231' target='_blank'>
+<i class='fa fa-github github-o'></i>
+<span>
+github
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+</header>
+<div class='container fade-in'>
+<div class='row project-show'>
+<section class='project-header'>
+<div class='col-md-8 col-md-offset-2'>
+<div class='text-center'>
+<h1>MYFLIX</h1>
+<p class='small'>A video subscription services.</p>
+</div>
+<div class='cover'>
+<img class='img-fluid' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/cover.png'>
+</div>
+</div>
+
+<section class='description wrapper clearfix'>
+<div class='col-md-8 no-padding'>
+<p>With the growing of modern broadcasting technology. Users tend to have more choices to access into video meterials. MyFlix is an application that solely permitting the admin team to have full control of their meterials, while subscriber need to make monthly payment to access the content. Suitable for entertainment industry and online classes.</p>
+<ul class='tags'>
+
+<li class='tag'>
+<span>Frontend</span>
+</li>
+
+<li class='tag'>
+<span>Backend</span>
+</li>
+
+<li class='tag'>
+<span>Ruby on Rails</span>
+</li>
+
+</ul>
+
+</div>
+<div class='col-md-4 col-sm-12 no-padding clearfix'>
+<a class='text-center' href='https://p-kuttiya-myflix.herokuapp.com' target='_blank'>
+<img class='logo' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/logo.png'>
+<div class='link'>
+<p>view live version</p>
+<svg height='16' viewbox='0 0 16 16' width='16'>
+<path class='arrow' d='M11.83 9.828c.29.293.53.193.53-.22V4.392c0-.41-.338-.75-.75-.75H6.39c-.41 0-.51.24-.22.532l5.66 5.656z'></path>
+<path class='arrow' d='M7.78 10.94c-.394.396-1.038.396-1.435 0L5.06 9.65c-.398-.396-.398-1.04 0-1.436l3.92-3.92c.395-.396 1.038-.396 1.437 0L11.7 5.583c.4.396.4 1.04 0 1.437l-3.92 3.92z'></path>
+<path d='M9.078 11.18v1.47c0 .237-.19.43-.428.43H7.18l-.023.022-.023-.023H3.35c-.236 0-.428-.192-.428-.43V8.866L2.9 8.842l.022-.022V7.35c0-.236.192-.428.428-.428h1.47l1.5-1.5H3.35c-1.064 0-1.928.863-1.928 1.928v5.3c0 1.065.863 1.93 1.928 1.93h5.3c1.064 0 1.928-.864 1.928-1.93V9.68l-1.5 1.5z'></path>
+</svg>
+
+</div>
+</a>
+</div>
+</section>
+
+</section>
+<section class='content wrapper'>
+<h4 id="introduction">Introduction</h4>
+<p>One of a production quality that I built a way back for my graduation project in Coding bootcamp, after a couple update and implementation, the project itself illustrates many of potentials and requirement of essential tasks that could demonstrate the efficiency of Ruby on Rails.</p>
+
+<h4 id="planning-phase">Planning phase</h4>
+<!--The project was developed with Postgresql. The database was decided to be as shown below.  
+
+!design image-->
+
+<h6 id="app-features">App features</h6>
+
+<ul class="checked split">
+  <li>Auth with bcypt (without devise)</li>
+  <li>Email services</li>
+  <li>Resetting password</li>
+  <li>Subscription services</li>
+  <li>Admin privilege</li>
+</ul>
+
+<ul class="checked split">
+  <li>Search for videos</li>
+  <li>Friend invitations</li>
+  <li>Organizing videos lists</li>
+  <li>Videos ratings</li>
+  <li>Following between users</li>
+</ul>
+
+<p>After the determination of what the database tables and associations would look like, as well as some features that the app would have, then we jump into front-end development.</p>
+
+<h4 id="frontend">Frontend</h4>
+
+<p>Integrate Bootstrap, Jquery and Sass to Rails application. Then implement our mockup pages, these pages are nothing more than static pages, which would 
+generally show an overall of how our frontend design would look like.</p>
+
+<blockquote>
+  <p>It would be generally a good idea to include guard and live-reload as well.</p>
+</blockquote>
+
+<p>Ruby on rails comes with programming environment, as a result, we could set the route to display all of our pages in UI route, and it will be visibled when our application is in development environment only.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># config/route.rb</span>
+<span class="no">Myflix</span><span class="o">::</span><span class="no">Application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="n">get</span> <span class="s1">'ui(/:action)'</span><span class="p">,</span> <span class="ss">controller: </span><span class="s1">'ui'</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># controllers/ui_controller.rb</span>
+<span class="k">class</span> <span class="nc">UiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="n">before_action</span> <span class="k">do</span>
+    <span class="n">redirect_to</span> <span class="ss">:root</span> <span class="k">if</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">env</span><span class="p">.</span><span class="nf">production?</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<h4 id="test">Test</h4>
+<p>The application requires test for both frontend and backend. Below is the illustration of tests integration and the purposes of the implementation.</p>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Integration</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rspec-rails</td>
+      <td>controller test</td>
+    </tr>
+    <tr>
+      <td>shoulda-matchers</td>
+      <td>rails library test</td>
+    </tr>
+    <tr>
+      <td>capybara</td>
+      <td>integration-test</td>
+    </tr>
+    <tr>
+      <td>capybara-email</td>
+      <td>integration mailer test</td>
+    </tr>
+    <tr>
+      <td>vcr</td>
+      <td>record/capture api</td>
+    </tr>
+    <tr>
+      <td>database_cleaner</td>
+      <td>reset test database</td>
+    </tr>
+    <tr>
+      <td>selenium-webdriver</td>
+      <td>automated tests</td>
+    </tr>
+    <tr>
+      <td>fabricator</td>
+      <td>Ruby object generator</td>
+    </tr>
+    <tr>
+      <td>faker</td>
+      <td>Fake data for fabricator</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Alternatively, fabricator and faker could be use for application seed as well.</p>
+</blockquote>
+
+<h4 id="tdd_workflow">Development</h4>
+<p>The development implementation is focusing on <strong>TDD principles</strong>; 
+create view, write test for desired functionalily then integrate the code according to TDD.</p>
+
+<h6 id="workflow-example">workflow example</h6>
+<p>The example would be for functionality at user new sign up.
+Starting by copy code from our ui design, then revise form using bootstrap rails form helper</p>
+
+<figure class="highlight"><pre><code class="language-haml" data-lang="haml"><span class="nt">%section</span><span class="nc">.register.container</span>
+  <span class="nc">.row</span>
+    <span class="nc">.col-sm-10.col-sm-offset-1</span>
+      <span class="p">=</span> <span class="n">bootstrap_form_for</span><span class="p">(</span><span class="vi">@user</span><span class="p">,</span> <span class="ss">layout: :horizontal</span><span class="p">,</span><span class="se"> | 
+</span>      <span class="ss">label_col: </span><span class="s2">"control-label col-sm-2"</span><span class="p">,</span> <span class="ss">control_col: </span><span class="s2">"col-sm-6"</span><span class="p">,</span> <span class="ss">html: </span><span class="p">{</span> <span class="ss">id: </span><span class="s2">"payment-form"</span> <span class="p">})</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+        <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">email_field</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">label: </span><span class="s2">"Email Address"</span>
+        <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">password_field</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">label: </span><span class="s2">"Password"</span>
+        <span class="p">=</span> <span class="n">hidden_field_tag</span> <span class="ss">:invitation_token</span><span class="p">,</span> <span class="s2">"</span><span class="si">#{</span><span class="vi">@invitation_token</span><span class="si">}</span><span class="s2">"</span>
+        <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">text_field</span> <span class="ss">:full_name</span><span class="p">,</span> <span class="ss">label: </span><span class="s2">"Full Name"</span>
+        <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">submit</span> <span class="s2">"Sign Up"</span><span class="p">,</span> <span class="ss">name: </span><span class="kp">nil</span><span class="p">,</span> <span class="ss">class: </span><span class="s2">"btn btn-success"</span></code></pre></figure>
+
+<p>Config Rspec and start writing test, the sample test is for ‘GET’ request at users controller; new action.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># specs/controllers/users_controller.rb</span>
+<span class="n">describe</span> <span class="no">UserssController</span> <span class="k">do</span>
+  <span class="n">describe</span> <span class="s2">"GET new"</span> <span class="k">do</span>
+    <span class="n">context</span> <span class="s2">"new user"</span> <span class="k">do</span>
+      <span class="n">get</span> <span class="ss">:new</span>
+      <span class="n">expect</span><span class="p">(</span><span class="n">assigns</span><span class="p">[</span><span class="ss">:user</span><span class="p">]).</span><span class="nf">to</span> <span class="n">be_instance_of</span><span class="p">(</span><span class="no">User</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>When run <code class="language-plaintext highlighter-rouge">rspec</code> in terminal, test will fail. 
+As a result, we would need to implement the rest of our functionlity to satisfy our test. 
+The first step is to define route for our ‘GET’ new at users controller.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># define route for testing controller</span>
+<span class="no">Myflix</span><span class="o">::</span><span class="no">Application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="c1">#... other code</span>
+  <span class="n">resources</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:new</span><span class="p">]</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Then include our new action logic to create user instace, 
+which will be used in our form helper.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Implement logic accordingly to satisfy the test</span>
+<span class="c1"># app/controllers/users_controller.rb</span>
+<span class="k">class</span> <span class="nc">UsersController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">new</span>
+    <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Test still fails since we haven’t define any associated User model.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Implement logic accordingly to satisfy the test</span>
+<span class="c1"># app/model/user.rb</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="c1">#single validation</span>
+  <span class="n">has_secure_password</span> <span class="ss">validation: </span><span class="kp">false</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># genarate migration in rails command</span>
+<span class="n">rails</span> <span class="n">g</span> <span class="n">migration</span> <span class="n">create_users</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># config migration file to match design database</span>
+<span class="k">class</span> <span class="nc">CreateUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:email</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:password_digest</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:full_name</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">timestamps</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># run migration in rails command</span>
+<span class="n">rake</span> <span class="n">db</span><span class="ss">:migrate</span></code></pre></figure>
+
+<p>Our controller test would already passed at this point. 
+additionally, we included Rails functionality in our model, which could be tested with ‘shoulda-matcher’.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Implement test for user model</span>
+<span class="c1"># spec/model/user.rb</span>
+<span class="n">describe</span> <span class="no">User</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_secure_password</span> <span class="p">}</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>The workflow would be similar for POST request, all of the app functionality is implemented by TDD principle.</p>
+<h6 id="development-logic-implementation">Development logic implementation.</h6>
+
+<ul class="checked split">
+  <li>TDD workflow for controllers and models as per planning pharse.</li>
+  <li>Include Stripe API</li>
+  <li>Wrap Stripe API in Wrapper.</li>
+  <li>Unobtrusive JS for form submit.</li>
+  <li>Search for videos name</li>
+  <li>Background job for mailer</li>
+  <li>Concerns for logic reusing.</li>
+  <li>Seed application with sample data.</li>
+</ul>
+
+<h4 id="deploy">Deploy</h4>
+<p>The app includes Puma as Rails thread concerrency, moreover, added Sidekiq and Resque for ruby background job processing.</p>
+
+<p>It also takes advantage of automate continuous integration and continuous delivery via circleCI.
+CircleCI config is implemented with heroku command, it will run tests and deploy if passed.</p>
+
+<p>The environment for our application is setup to deploy to Heroku, with staging and production servers. Staging is set up as similar as production, the app work flow will deploy to staging server, if successfully passed, pulled requeseted will be made on github master branch, then CircleCI will automate tasks and deploy to production server.</p>
+
+</section>
+<section class='footer text-center'>
+<h3>
+MORE WORK
+</h3>
+<p>
+A SHOWCASE OF PROJECTS, <br>
+DESIGN AND DEVELOPMENT.
+</p>
+<section class='showcase'>
+<div class='showcase-img'>
+
+<a class='square' href='/projects/myyelp'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>MYYELP</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>A business review website.</p>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/order'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>ORDER</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Single page online sushi order app</p>
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/photogram'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>PHOTOGRAM</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Photos sharing social media.</p>
+
+
+
+
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+</section>
+</div>
+</div>
+<footer>
+
+</footer>
+<script src='/assets/js/add_fade.js'></script>
+<script src='/assets/js/remove_fade.js'></script>
+<script src='/assets/js/tooltip.js'></script>
+</body>
+</html>

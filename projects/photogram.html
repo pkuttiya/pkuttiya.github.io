@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+
+photogram
+
+</title>
+<link href='/assets/favicons/apple-touch-icon.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/assets/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/assets/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/assets/favicons/manifest.json' rel='manifest'>
+<meta content='#000000' name='theme-color'>
+<link href='/assets/css/main.css' rel='stylesheet'>
+<script src='/assets/js/jquery.min.js'></script>
+<script src='/assets/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+<header>
+<nav>
+<div class='nav' id='page'>
+<div id='logo'>
+<h3>
+<a href='/'>Paul Kuttiya</a>
+</h3>
+</div>
+<div class='nav-right text-center'>
+<ul>
+<li>
+<a href='/resume'>
+<i class='fa fa-file'></i>
+<span>
+resume
+</span>
+</a>
+</li>
+<li>
+<a href='/contact'>
+<i class='fa fa-envelope'></i>
+<span>
+contact
+</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/pookzzz2231' target='_blank'>
+<i class='fa fa-github github-o'></i>
+<span>
+github
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+</header>
+<div class='container fade-in'>
+<div class='row project-show'>
+<section class='project-header'>
+<div class='col-md-8 col-md-offset-2'>
+<div class='text-center'>
+<h1>PHOTOGRAM</h1>
+<p class='small'>Photos sharing social media.</p>
+</div>
+<div class='cover'>
+<img class='img-fluid' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/cover.png'>
+</div>
+</div>
+
+<section class='description wrapper clearfix'>
+<div class='col-md-8 no-padding'>
+<p>Internet web base application, focusing on photo sharing and user interacting. </p>
+<ul class='tags'>
+
+<li class='tag'>
+<span>Frontend</span>
+</li>
+
+<li class='tag'>
+<span>Backend</span>
+</li>
+
+<li class='tag'>
+<span>Ruby on Rails</span>
+</li>
+
+<li class='tag'>
+<span>UX/UI design</span>
+</li>
+
+</ul>
+
+</div>
+<div class='col-md-4 col-sm-12 no-padding clearfix'>
+<a class='text-center' href='https://pkuttiya-photogram.herokuapp.com' target='_blank'>
+<img class='logo' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/logo.png'>
+<div class='link'>
+<p>view live version</p>
+<svg height='16' viewbox='0 0 16 16' width='16'>
+<path class='arrow' d='M11.83 9.828c.29.293.53.193.53-.22V4.392c0-.41-.338-.75-.75-.75H6.39c-.41 0-.51.24-.22.532l5.66 5.656z'></path>
+<path class='arrow' d='M7.78 10.94c-.394.396-1.038.396-1.435 0L5.06 9.65c-.398-.396-.398-1.04 0-1.436l3.92-3.92c.395-.396 1.038-.396 1.437 0L11.7 5.583c.4.396.4 1.04 0 1.437l-3.92 3.92z'></path>
+<path d='M9.078 11.18v1.47c0 .237-.19.43-.428.43H7.18l-.023.022-.023-.023H3.35c-.236 0-.428-.192-.428-.43V8.866L2.9 8.842l.022-.022V7.35c0-.236.192-.428.428-.428h1.47l1.5-1.5H3.35c-1.064 0-1.928.863-1.928 1.928v5.3c0 1.065.863 1.93 1.928 1.93h5.3c1.064 0 1.928-.864 1.928-1.93V9.68l-1.5 1.5z'></path>
+</svg>
+
+</div>
+</a>
+</div>
+</section>
+
+</section>
+<section class='content wrapper'>
+<h4 id="introduction">Introduction</h4>
+<p>My employee has a chance to demonstrate a Ruby on Rails’s potentials as per our client’s request regarding a prototype sample application emphasizing on social network photo sharing, hence Photogram was designed.</p>
+
+<p>Although the application can be continuingly developed and contributed, it shows the majority interactions of modern user social network functionality. Ultimately, it could also demonstrate the efficiency of Ruby on Rails.</p>
+
+<h4 id="research-and-ideas">Research and ideas</h4>
+<p>Most of modern social network applications share some of the common components, such as followings, likes, upload photos and comments. The building process for photogram would break into backend part which interact between users request and server response, and front-end part, which mostly interacts with Jquery and Ajax. For further implementation, React or other front-end framework could come into use, if preferred.</p>
+
+<p>As stated above, photogram was decided to be built with Rails TDD principle for the back-end, implemented by Jquery/Ajax on the front-end, with future expectation on implementing some React on Rails. Below is the tests that are used for the app.</p>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Integration</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rspec-rails</td>
+      <td>controller test</td>
+    </tr>
+    <tr>
+      <td>shoulda-matchers</td>
+      <td>rails library test</td>
+    </tr>
+    <tr>
+      <td>capybara</td>
+      <td>integration-test</td>
+    </tr>
+    <tr>
+      <td>capybara-email</td>
+      <td>integration mailer test</td>
+    </tr>
+    <tr>
+      <td>vcr</td>
+      <td>record/capture api</td>
+    </tr>
+    <tr>
+      <td>database_cleaner</td>
+      <td>reset test database</td>
+    </tr>
+    <tr>
+      <td>selenium-webdriver</td>
+      <td>automated tests</td>
+    </tr>
+    <tr>
+      <td>fabricator</td>
+      <td>Ruby object generator</td>
+    </tr>
+    <tr>
+      <td>faker</td>
+      <td>Fake data for fabricator</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><a href="/projects/myflix#tdd_workflow">Find out more on how I normally work with TDD workflow.</a></p>
+</blockquote>
+
+<p>Additionally, the app also focusing on mobile and resposive design.</p>
+
+<figure class="mobile">
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/mobile.png" title="mobile" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/mobile.png" />
+  </a>
+</figure>
+
+<h4 id="features-for-non-registered-users">Features for non-registered users</h4>
+<p>Visitors will be forced to land on login/register page.</p>
+
+<blockquote>
+  <p>Registration authentication is implemented without Devise, 
+some manual logic includes required unique username and specific fields upon signup.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/register_page.png" title="register page" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/register_page.png" />
+  </a>
+</figure>
+
+<p>Live search for users(manually implemented without gem)</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/live_search.png" title="live search" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/live_search.png" />
+  </a>
+</figure>
+
+<p>Visit each user profile page at <code class="language-plaintext highlighter-rouge">/user_name</code>, view profile information,
+posts count, followers/followings count and uploaded photo in thumbnails format.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/user_profile.png" title="user profile" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/user_profile.png" />
+  </a>
+</figure>
+
+<p>Visit and view user’s photo post.</p>
+
+<blockquote>
+  <p>Each post permalink is encrypted and randomly generated by unique token.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/user_post.png" title="user post" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/user_post.png" />
+  </a>
+</figure>
+
+<h4 id="features-for-registered-users">Features for registered users</h4>
+<p>After user registration; with unique username, user will be redirected to the user profile page, with the default avatar photo.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/profile_default.png" title="profile default" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/profile_default.png" />
+  </a>
+</figure>
+
+<p>User can update avatar and include information such as name, website, bio and email address.</p>
+
+<blockquote>
+  <p>All uploaded photos are stored remotely with Amazon S3 services, using <code class="language-plaintext highlighter-rouge">Carrierwave</code>.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/profile_edit.png" title="profile edit" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/profile_edit.png" />
+  </a>
+</figure>
+
+<p>Ability to create new post, by navigate to add photo shortcut.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/add_post.png" title="add post" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/add_post.png" />
+  </a>
+</figure>
+
+<p>Create post with image, location and caption.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/new_post.png" title="new post" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/new_post.png" />
+  </a>
+</figure>
+
+<p>User can create hashtags with <code class="language-plaintext highlighter-rouge">#</code> following by letters or numbers in caption field, 
+the app will find existings tags in the database and group posts with the same hashtags at <code class="language-plaintext highlighter-rouge">/tags/hashtag_name</code>.</p>
+
+<blockquote>
+  <p>Hashtag will be newly created if not yet existed in the database.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/hashtag.png" title="hashtag" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/hashtag.png" />
+  </a>
+</figure>
+
+<p>User can comment, like or unlike on any user’s post(including own posts), as well as hashtag on comment. 
+Additionally, user can also mention other user on comment by prepend other username with <code class="language-plaintext highlighter-rouge">@</code>.</p>
+
+<blockquote>
+  <p>Hashtags and mentions are handled by implementing rails view logic, which will create a link inside comment for <code class="language-plaintext highlighter-rouge">#hashtag_name</code>, <code class="language-plaintext highlighter-rouge">@user_name</code> to <code class="language-plaintext highlighter-rouge">/tags/hashtag_name</code> and <code class="language-plaintext highlighter-rouge">/user_name</code>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Photogram limited user to be able to like only one time per post(create <code class="language-plaintext highlighter-rouge">like</code> in DB for the new <code class="language-plaintext highlighter-rouge">like</code>). 
+If liked on the same post again, like will be updated(update <code class="language-plaintext highlighter-rouge">like</code> DB to false), then render view accordingly.</p>
+</blockquote>
+
+<p>Noted that <code class="language-plaintext highlighter-rouge">like</code> will not be destroyed but updated its value instead, preventing DB from unnecessarily creating and destroying <code class="language-plaintext highlighter-rouge">Like table</code> in DB for repeatedly like from the same user.</p>
+
+<!--!post comment photo-->
+
+<p>User can follow other users dynamically via other user profile page, or by visiting own/others followers, followings link on the profile page.</p>
+
+<p>Followers and Followings link in user profile page will show a popup modal when vistied; implemented with Rails Ajax to get view from another template, which user can follow or unfollow user within a popup modal.</p>
+
+<blockquote>
+  <p>Follow and unfollow will update Rails relation DB as well as render view accordingly.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/follow_user.png" title="follow user" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/follow_user.png" />
+  </a>
+</figure>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/follow_modal.png" title="follow modal" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/follow_modal.png" />
+  </a>
+</figure>
+
+<p>Notification for users when user’s post gets commented or liked, user gets mentioned or followed. 
+Also, will notified user when user’s <code class="language-plaintext highlighter-rouge">following user</code> posted a new post.</p>
+
+<p>Additionally, displaying new notifications count when user login back to account. Notification will resets to zero after user visits notification button, then restart the count for new notification if received as stated per event above.</p>
+
+<blockquote>
+  <p>Notifications logic also handles some edge cases. For example, if <code class="language-plaintext highlighter-rouge">user_1</code> comments or mentions on <code class="language-plaintext highlighter-rouge">user_2</code> at the same post multiple times, will only considered comment/mention notification to count as one.</p>
+</blockquote>
+
+<p>Notification displays the unread notice(heart icon).</p>
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/notice_header.png" title="notice header" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/notice_header.png" />
+  </a>
+</figure>
+
+<p>When clicked, the notification modal will display, 
+then show the new notification and reset noticfication’s count to zero.</p>
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/notice_modal.png" title="notice modal" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/notice_modal.png" />
+  </a>
+</figure>
+
+<p>Displaying user’s <code class="language-plaintext highlighter-rouge">following users</code> feed at root path; <code class="language-plaintext highlighter-rouge">/</code>.</p>
+
+<blockquote>
+  <p>User’s feed can be implemented further to display posts from specified users, such as, from a user that has the most followings or user that shares similar hashtags/mentions.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/feed.png" title="feed" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/feed.png" />
+  </a>
+</figure>
+
+<p class="alert alert-grey">For a better user’s experience; comment, like, and follow functionality are implemented with Rails Unobtrusive JavaScript, which includes updating its value without reloading page via Rails’s Ajax process.</p>
+
+</section>
+<section class='footer text-center'>
+<h3>
+MORE WORK
+</h3>
+<p>
+A SHOWCASE OF PROJECTS, <br>
+DESIGN AND DEVELOPMENT.
+</p>
+<section class='showcase'>
+<div class='showcase-img'>
+
+<a class='square' href='/projects/myflix'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>MYFLIX</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>A video subscription services.</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/myyelp'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>MYYELP</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>A business review website.</p>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/order'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>ORDER</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Single page online sushi order app</p>
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+</section>
+</div>
+</div>
+<footer>
+
+</footer>
+<script src='/assets/js/add_fade.js'></script>
+<script src='/assets/js/remove_fade.js'></script>
+<script src='/assets/js/tooltip.js'></script>
+</body>
+</html>

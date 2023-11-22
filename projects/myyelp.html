@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+
+myyelp
+
+</title>
+<link href='/assets/favicons/apple-touch-icon.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/assets/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/assets/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/assets/favicons/manifest.json' rel='manifest'>
+<meta content='#000000' name='theme-color'>
+<link href='/assets/css/main.css' rel='stylesheet'>
+<script src='/assets/js/jquery.min.js'></script>
+<script src='/assets/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+<header>
+<nav>
+<div class='nav' id='page'>
+<div id='logo'>
+<h3>
+<a href='/'>Paul Kuttiya</a>
+</h3>
+</div>
+<div class='nav-right text-center'>
+<ul>
+<li>
+<a href='/resume'>
+<i class='fa fa-file'></i>
+<span>
+resume
+</span>
+</a>
+</li>
+<li>
+<a href='/contact'>
+<i class='fa fa-envelope'></i>
+<span>
+contact
+</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/pookzzz2231' target='_blank'>
+<i class='fa fa-github github-o'></i>
+<span>
+github
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+</header>
+<div class='container fade-in'>
+<div class='row project-show'>
+<section class='project-header'>
+<div class='col-md-8 col-md-offset-2'>
+<div class='text-center'>
+<h1>MYYELP</h1>
+<p class='small'>A business review website.</p>
+</div>
+<div class='cover'>
+<img class='img-fluid' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/cover.png'>
+</div>
+</div>
+
+<section class='description wrapper clearfix'>
+<div class='col-md-8 no-padding'>
+<p>An application that focuses on local business review and networking site.</p>
+<ul class='tags'>
+
+<li class='tag'>
+<span>Frontend</span>
+</li>
+
+<li class='tag'>
+<span>Backend</span>
+</li>
+
+<li class='tag'>
+<span>Ruby on Rails</span>
+</li>
+
+</ul>
+
+</div>
+<div class='col-md-4 col-sm-12 no-padding clearfix'>
+<a class='text-center' href='https://p-kuttiya-myyelp.herokuapp.com' target='_blank'>
+<img class='logo' src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/logo.png'>
+<div class='link'>
+<p>view live version</p>
+<svg height='16' viewbox='0 0 16 16' width='16'>
+<path class='arrow' d='M11.83 9.828c.29.293.53.193.53-.22V4.392c0-.41-.338-.75-.75-.75H6.39c-.41 0-.51.24-.22.532l5.66 5.656z'></path>
+<path class='arrow' d='M7.78 10.94c-.394.396-1.038.396-1.435 0L5.06 9.65c-.398-.396-.398-1.04 0-1.436l3.92-3.92c.395-.396 1.038-.396 1.437 0L11.7 5.583c.4.396.4 1.04 0 1.437l-3.92 3.92z'></path>
+<path d='M9.078 11.18v1.47c0 .237-.19.43-.428.43H7.18l-.023.022-.023-.023H3.35c-.236 0-.428-.192-.428-.43V8.866L2.9 8.842l.022-.022V7.35c0-.236.192-.428.428-.428h1.47l1.5-1.5H3.35c-1.064 0-1.928.863-1.928 1.928v5.3c0 1.065.863 1.93 1.928 1.93h5.3c1.064 0 1.928-.864 1.928-1.93V9.68l-1.5 1.5z'></path>
+</svg>
+
+</div>
+</a>
+</div>
+</section>
+
+</section>
+<section class='content wrapper'>
+<h4 id="introduction">Introduction</h4>
+<p>I came across one of the assignments while i was attending my coding school, 
+and had an opportunity to challenge myself to build a website that could educate myself 
+as well as get accustomed with Rubu on Rails’s performance.</p>
+
+<p>MyYelp is a mocking website inspired by Yelp that intended to show the benefits of Ruby on Rails,
+it consists of basic CRUD functionality and integrated with Rspec tests.</p>
+
+<h4 id="planning-and-research">Planning and research</h4>
+<p>The app stores data for users, businesses and reviews.<br />
+Thus, it also has the models and controller according to database tables.</p>
+
+<!--The database tables and associations can be illustrated as shown. 
+
+![design image](/assets/img/myyelp/banner.png )-->
+
+<p>Additionally, the app is implemented without <code class="language-plaintext highlighter-rouge">devise gem</code>, hence the controller needs <code class="language-plaintext highlighter-rouge">sessions_controller</code> to control user <code class="language-plaintext highlighter-rouge">sign_in</code> and <code class="language-plaintext highlighter-rouge">sign_out</code> action; which wouldn’t have any model associated with it,
+because there is no any table that needs to store data for users session.</p>
+
+<h6 id="test">Test</h6>
+<p>Test tools:</p>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Integration</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rspec-rails</td>
+      <td>controller test</td>
+    </tr>
+    <tr>
+      <td>shoulda-matchers</td>
+      <td>rails library test</td>
+    </tr>
+    <tr>
+      <td>capybara</td>
+      <td>integration-test</td>
+    </tr>
+    <tr>
+      <td>capybara-email</td>
+      <td>integration mailer test</td>
+    </tr>
+    <tr>
+      <td>vcr</td>
+      <td>record/capture api</td>
+    </tr>
+    <tr>
+      <td>database_cleaner</td>
+      <td>reset test database</td>
+    </tr>
+    <tr>
+      <td>selenium-webdriver</td>
+      <td>automated tests</td>
+    </tr>
+    <tr>
+      <td>fabricator</td>
+      <td>Ruby object generator</td>
+    </tr>
+    <tr>
+      <td>faker</td>
+      <td>Fake data for fabricator</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>The seed data uses fabricator and faker as well.</p>
+</blockquote>
+
+<h4 id="development">Development</h4>
+<p>Initially the site launches off with UI routes, UIcontroller and UI views design,
+which are available only for development environment.</p>
+
+<p>Then, it is built with TDD; write tests, moving the view from UI into specified <code class="language-plaintext highlighter-rouge">controller#action</code> view, code up associated model and <code class="language-plaintext highlighter-rouge">controller#action</code> logic.</p>
+
+<blockquote id="tdd_workflow">
+  <p><a href="/projects/myflix#tdd_workflow">Find out more on how I normally work with TDD workflow.</a></p>
+</blockquote>
+
+<h6 id="app-features">App features</h6>
+<p>The app is a CRUD application which its routes point to controllers that associated with model for user, review and business as shown below.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># config/route.rb</span>
+<span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="n">root</span> <span class="ss">to: </span><span class="s1">'reviews#index'</span>
+  <span class="n">get</span> <span class="s1">'ui(/:action)'</span><span class="p">,</span> <span class="ss">controller: </span><span class="s1">'ui'</span>
+
+  <span class="n">get</span> <span class="s1">'/signup'</span><span class="p">,</span> <span class="ss">to: </span><span class="s2">"users#new"</span>
+  <span class="n">resources</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:create</span><span class="p">,</span> <span class="ss">:show</span><span class="p">]</span>
+
+  <span class="n">get</span> <span class="s1">'/login'</span><span class="p">,</span> <span class="ss">to: </span><span class="s2">"sessions#new"</span>
+  <span class="n">resources</span> <span class="ss">:sessions</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:create</span><span class="p">]</span>
+  
+  <span class="n">get</span> <span class="s1">'/logout'</span><span class="p">,</span> <span class="ss">to: </span><span class="s2">"sessions#destroy"</span>
+
+  <span class="n">resources</span> <span class="ss">:businesses</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:index</span><span class="p">,</span> <span class="ss">:show</span><span class="p">,</span> <span class="ss">:new</span><span class="p">,</span> <span class="ss">:create</span><span class="p">]</span> <span class="k">do</span>
+    <span class="n">resources</span> <span class="ss">:reviews</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:new</span><span class="p">,</span> <span class="ss">:create</span><span class="p">,</span><span class="ss">:edit</span><span class="p">,</span> <span class="ss">:update</span><span class="p">]</span> 
+  <span class="k">end</span>
+
+  <span class="n">resources</span> <span class="ss">:reviews</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:index</span><span class="p">]</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>landing page; <code class="language-plaintext highlighter-rouge">/</code>, is responsed by <code class="language-plaintext highlighter-rouge">reviews#index</code>, which shows the 10 most newest reviews from our users.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_index.png" title="review index" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_index.png" />
+  </a>
+</figure>
+
+<p>signup for new user; <code class="language-plaintext highlighter-rouge">/signup</code> implemented with <code class="language-plaintext highlighter-rouge">new</code> action from <code class="language-plaintext highlighter-rouge">users</code> controller, the server will response by rendering <code class="language-plaintext highlighter-rouge">new</code> view from <code class="language-plaintext highlighter-rouge">users</code>.</p>
+
+<p>When users submit the form, <code class="language-plaintext highlighter-rouge">users</code> controller <code class="language-plaintext highlighter-rouge">create</code> action will handle the <code class="language-plaintext highlighter-rouge">POST</code> request at <code class="language-plaintext highlighter-rouge">users/create</code>(generated by <code class="language-plaintext highlighter-rouge">resources</code>), addtionally, Rails logic in <code class="language-plaintext highlighter-rouge">User</code> model will take care of <code class="language-plaintext highlighter-rouge">:users</code> parameter validation.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_signup.png" title="user signup" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_signup.png" />
+  </a>
+</figure>
+
+<p>Similary with <code class="language-plaintext highlighter-rouge">/login</code>, but with <code class="language-plaintext highlighter-rouge">sessions</code> controller instead.</p>
+
+<blockquote>
+  <p>Without model, the <code class="language-plaintext highlighter-rouge">POST</code> request params are handled by <code class="language-plaintext highlighter-rouge">bcrypt</code> validation, 
+if succeed, will set user session.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_login.png" title="user login" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_login.png" />
+  </a>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">resources :users</code> is a Rails helper, which will generate url relative to the <code class="language-plaintext highlighter-rouge">action</code> accordingly.</p>
+
+<p>In this case, <code class="language-plaintext highlighter-rouge">resources</code> is for a <code class="language-plaintext highlighter-rouge">show</code> action which will generate <code class="language-plaintext highlighter-rouge">/users/:id</code>, as a result, allowing us to pass in <code class="language-plaintext highlighter-rouge">:id</code> as <code class="language-plaintext highlighter-rouge">params[:id]</code> in our <code class="language-plaintext highlighter-rouge">usersController</code>, 
+then we can query for specified user info with <code class="language-plaintext highlighter-rouge">User</code> model and <code class="language-plaintext highlighter-rouge">params[:id]</code> and display in our view.</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">params[:id]</code> could be anything; id, username or token.</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># look for a record with params[:id] as username</span>
+<span class="k">def</span> <span class="nf">show</span>
+  <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">find_by</span><span class="p">(</span><span class="ss">username: </span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+<span class="k">end</span></code></pre></figure>
+
+<blockquote>
+  <p>Rails by default call <code class="language-plaintext highlighter-rouge">to_param</code> method to <code class="language-plaintext highlighter-rouge">link_to</code> view helper(rails helper method to genearte <code class="language-plaintext highlighter-rouge">&lt;a&gt;..&lt;/a&gt;</code> tag in Rails view), 
+which returns a model’s instance id, overwrite <code class="language-plaintext highlighter-rouge">to_param</code> method in the model to return a different value.</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#app/models/user.rb</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">validates_uniqueness_of</span> <span class="ss">:username</span>
+  <span class="c1">#... other code</span>
+
+  <span class="k">def</span> <span class="nf">to_param</span>
+    <span class="c1">#call username method to User's instance</span>
+    <span class="c1">#which will return an instance's username </span>
+    <span class="n">username</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_show.png" title="user show" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/user_show.png" />
+  </a>
+</figure>
+
+<p>logout will send <code class="language-plaintext highlighter-rouge">GET</code> request to <code class="language-plaintext highlighter-rouge">sessions</code> controller <code class="language-plaintext highlighter-rouge">destroy</code> action.</p>
+
+<blockquote>
+  <p>Response for destroy action will set user session to <code class="language-plaintext highlighter-rouge">nil</code></p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/logout.png" title="logout" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/logout.png" />
+  </a>
+</figure>
+
+<p>businesses controller has <code class="language-plaintext highlighter-rouge">index</code>, <code class="language-plaintext highlighter-rouge">show</code>, <code class="language-plaintext highlighter-rouge">new</code> and <code class="language-plaintext highlighter-rouge">create</code> actions, 
+which implement by Rails <code class="language-plaintext highlighter-rouge">resources</code> helper, 
+and will generate <code class="language-plaintext highlighter-rouge">/businesses</code>, <code class="language-plaintext highlighter-rouge">/businesses/:id</code>, <code class="language-plaintext highlighter-rouge">/businesses/new</code> and <code class="language-plaintext highlighter-rouge">/businesses/create</code></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">/businesses</code> path is responsed with <code class="language-plaintext highlighter-rouge">business#index</code> which will show the most 10 newest created business.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_index.png" title="business index" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_index.png" />
+  </a>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">/businesses/:id</code> is responsed with <code class="language-plaintext highlighter-rouge">business#show</code>, and will render show template with a business instance variable find from <code class="language-plaintext highlighter-rouge">params[:id]</code></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#app/controllers/businesses_controller.rb</span>
+<span class="k">class</span> <span class="nc">BusinessesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="c1">#...other code</span>
+
+  <span class="k">def</span> <span class="nf">show</span>
+    <span class="vi">@business</span> <span class="o">=</span> <span class="no">Business</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_show.png" title="business show" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_show.png" />
+  </a>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">/businesses/new</code> will render a <code class="language-plaintext highlighter-rouge">new</code> business template, after submited will posted to <code class="language-plaintext highlighter-rouge">/businesses/create</code></p>
+
+<blockquote>
+  <p>Business ratings system is created with checkbox, and Rails form helper, 
+when posted the star ratings will be posted as <code class="language-plaintext highlighter-rouge">business[:rating]</code> param.</p>
+</blockquote>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_new.png" title="business new" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/business_new.png" />
+  </a>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">resources:reviews</code> route that nested inside <code class="language-plaintext highlighter-rouge">resources:businesses</code> route will generate url that takes two parameter; 
+<code class="language-plaintext highlighter-rouge">:business_id</code> and <code class="language-plaintext highlighter-rouge">:id</code>, the later param would detemine from the most inner resources(reviews).</p>
+
+<p><code class="language-plaintext highlighter-rouge">businesses/:business_id/reviews/new</code> sends <code class="language-plaintext highlighter-rouge">GET</code> request to <code class="language-plaintext highlighter-rouge">reviews#new</code> controller, 
+which will reponse with reviews <code class="language-plaintext highlighter-rouge">new</code> template.</p>
+
+<p><code class="language-plaintext highlighter-rouge">businesses/:business_id/reviews/create</code> sends <code class="language-plaintext highlighter-rouge">POST</code> request to <code class="language-plaintext highlighter-rouge">reviews#create</code> controller, 
+after the server validates the <code class="language-plaintext highlighter-rouge">POST</code> params from the submited form and makes changes to the database, 
+<code class="language-plaintext highlighter-rouge">reviews#create</code> will send back a response; in this case <code class="language-plaintext highlighter-rouge">redirect_to</code> <code class="language-plaintext highlighter-rouge">businesses/:business_id</code> url.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_new.png" title="review new" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_new.png" />
+  </a>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">reviews#edit</code> and <code class="language-plaintext highlighter-rouge">reviews#update</code> are similar with <code class="language-plaintext highlighter-rouge">reviews#new</code> and <code class="language-plaintext highlighter-rouge">reviews#create</code>, 
+except the <code class="language-plaintext highlighter-rouge">reviews#edit</code> action has to look for the data and display in the <code class="language-plaintext highlighter-rouge">edit</code> template when responsed back from <code class="language-plaintext highlighter-rouge">GET</code> request, after the form submission(<code class="language-plaintext highlighter-rouge">POST</code> to the server with edited params), the <code class="language-plaintext highlighter-rouge">reviews#update</code> will validate and response back accordingly.</p>
+
+<figure>
+  <a href="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_edit.png" title="review edit" data-toggle="tooltip" target="_blank">
+    <img src="https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myyelp/review_edit.png" />
+  </a>
+</figure>
+
+</section>
+<section class='footer text-center'>
+<h3>
+MORE WORK
+</h3>
+<p>
+A SHOWCASE OF PROJECTS, <br>
+DESIGN AND DEVELOPMENT.
+</p>
+<section class='showcase'>
+<div class='showcase-img'>
+
+<a class='square' href='/projects/myflix'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/myflix/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>MYFLIX</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>A video subscription services.</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/order'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/order/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>ORDER</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Single page online sushi order app</p>
+
+
+
+
+
+
+</div>
+</div>
+</a>
+
+<a class='square' href='/projects/photogram'>
+<div class='img' style='background-image: url(https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/banner.png);'></div>
+<div class='cover-logo'>
+<img src='https://s3.us-east-2.amazonaws.com/pkuttiya-site/img/projects/photogram/logo.png'>
+</div>
+<div class='overlay'>
+<div class='text'>
+<div class='image-title'>PHOTOGRAM</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Photos sharing social media.</p>
+
+
+
+
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+</section>
+</div>
+</div>
+<footer>
+
+</footer>
+<script src='/assets/js/add_fade.js'></script>
+<script src='/assets/js/remove_fade.js'></script>
+<script src='/assets/js/tooltip.js'></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+
+Paul Kuttiya
+
+</title>
+<link href='/assets/css/designs/food_order/main.css' rel='stylesheet'>
+</head>
+
+<link href='/assets/favicons/apple-touch-icon.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/assets/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/assets/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/assets/favicons/manifest.json' rel='manifest'>
+<meta content='#000000' name='theme-color'>
+
+<body>
+<div class='nav-container'>
+<nav>
+<div id='nav-logo'>
+<h1>
+<a href='/designs/food_order'>Food Order</a>
+</h1>
+</div>
+<ul class='nav-icons'>
+<li>
+<a href='#' id='cart-items'>
+<div class='cart'>
+<span class='total'>3</span>
+<i class='fa fa-shopping-basket'></i>
+</div>
+<span>$32.98</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class='order-container'>
+<form>
+<h2>
+<i class='fa fa-user'></i>
+<span>Information</span>
+</h2>
+<fieldset>
+<div class='input-wrapper'>
+<div class='input-group'>
+<label for='first'>Firstname</label>
+<input id='first' name='first' type='text'>
+</div>
+<div class='input-group'>
+<label for='last'>Lastname</label>
+<input id='last' name='last' type='text'>
+</div>
+</div>
+<div class='input-wrapper'>
+<div class='input-group'>
+<label for='address'>Address</label>
+<input id='address' name='address' type='text'>
+</div>
+<div class='input-group'>
+<label for='city'>City</label>
+<input id='city' name='city' type='text'>
+</div>
+</div>
+<div class='input-wrapper'>
+<div class='input-group'>
+<label for='phone'>Phone</label>
+<input id='phone' name='phone' type='text'>
+</div>
+<div class='input-group'>
+<label for='email'>Email</label>
+<input id='email' name='email' type='text'>
+</div>
+</div>
+<h2>
+<i class='fa fa-money'></i>
+<span>Payment</span>
+</h2>
+<div class='input-wrapper'>
+<div class='radio-group'>
+<input checked='checked' id='cash' name='payment' type='radio' value='cash'>
+<label for='cash'>Cash</label>
+</div>
+<div class='radio-group'>
+<input id='card' name='payment' type='radio' value='card'>
+<label for='card'>Credit Card</label>
+</div>
+<div class='radio-group'>
+<input id='paypal' name='payment' type='radio' value='palpal'>
+<label for='paypal'>Paypal</label>
+</div>
+</div>
+<button type='submit'>Order now!</button>
+</fieldset>
+</form>
+<div id='order-summary'>
+<div class='header'>
+<h2>Order</h2>
+</div>
+<div class='body'>
+<ul class='cart-lists'>
+<li>
+<div class='list-container'>
+<span>Pizza</span>
+<div class='edit'>
+<span class='quality'>3</span>
+<a class='minus' href='#'>
+<i class='fa fa-minus-circle'></i>
+</a>
+<a class='plus' href='#'>
+<i class='fa fa-plus-circle'></i>
+</a>
+<span class='item-price'>$9.82</span>
+<a class='delete' href='#'>
+<i class='fa fa-trash-o'></i>
+</a>
+</div>
+</div>
+</li>
+</ul>
+<div class='modal-footer'>
+<div class='total'>
+<h2>
+<span>Total:</span>
+<span>$24.24</span>
+</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
